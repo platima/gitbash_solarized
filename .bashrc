@@ -40,11 +40,11 @@ eval `dircolors ~/.dir_colors`
 # Set prompt and window title
 inputcolor='[0;37m'
 cwdcolor='[0;34m'
-host_name='[1;31m'
+host_name='[0;31m'
 branchcolor='[0;36m'
 user_color
 PROMPT_COMMAND='settitle; git_branch; get_hostname; history -a;'
-PS1='\n\[\e${cwdcolor}\][${PWD}]\[\e${branchcolor}\]${gitbranch}\n\[\e${usercolor}\][\u]\[\e${host_name}\][${SHORTNAME}]\[\e${inputcolor}\] $ '
+PS1='\[\e${usercolor}\]\u@\[\e${host_name}\]${SHORTNAME}:\[\e${cwdcolor}\]${PWD}\[\e${branchcolor}\]${gitbranch}\[\e${inputcolor}\] $ '
 export PS1
 
 # Aliases
