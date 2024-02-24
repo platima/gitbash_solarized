@@ -15,7 +15,7 @@ function get_hostname {
 }
 
 function git_branch() { 
-  gitbranch=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'); 
+  gitbranch=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'); 
 }
 
 function user_color {
@@ -42,9 +42,10 @@ inputcolor='[0;37m'
 cwdcolor='[0;34m'
 host_name='[0;31m'
 branchcolor='[0;36m'
+dollar_color='[2;37m'
 user_color
 PROMPT_COMMAND='settitle; git_branch; get_hostname; history -a;'
-PS1='\[\e${usercolor}\]\u@\[\e${host_name}\]${SHORTNAME}:\[\e${cwdcolor}\]${PWD}\[\e${branchcolor}\]${gitbranch}\[\e${inputcolor}\] $ '
+PS1='\[\e${usercolor}\]\u@\[\e${host_name}\]${SHORTNAME}:\[\e${cwdcolor}\]${PWD}\[\e${branchcolor}\]${gitbranch}\[\e${dollar_color}\] $\[\e${inputcolor}\]'
 export PS1
 
 # Aliases
