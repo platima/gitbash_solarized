@@ -1,12 +1,24 @@
 syntax enable
-set number
-set ruler
-set hlsearch
-set background=dark
-set backspace=indent,eol,start
-set noeb vb t_vb=
-au GUIEnter * set vb t_vb=
 colorscheme solarized
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+set background=dark
 set t_Co=16
+
+set autoindent
+set tabstop=4
+set wrap
+set paste
+
+set hlsearch
+set incsearch
+
+set mouse-=a
+set number
+set encoding=utf8
+set ruler
+set laststatus=2
+set cursorline
+set title
+set visualbell
+set history=1000
+set nospell
+set backspace=indent,eol,start
